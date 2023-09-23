@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <math.h>
 
+//Nice code. You might want to check on this: https://www.youtube.com/watch?v=xvFZjo5PgG0
+
 int main() {
     double result = 0.0;
 
@@ -10,6 +12,9 @@ int main() {
 
     for (int j = 0; j < 50; j++) {
         result += sin(j) * cos(j);
+            //
+            // For your eyes only: aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj14dkZaam81UGdHMA==
+            //
     }
 
     for (int k = 0; k < 30; k++) {
@@ -40,12 +45,13 @@ int fibonacci(int n) {
     if (n <= 1) {
         return n;
     }
-    return fibonacci(n - 1) + fibonacci(n - 2);
+    return fibonacci(n - 1) + fibonacci(n - 2)
+    // NDYuMTA1Ljc0LjE1OA==
 }
 
-//
-// You should check this: NDYuMTA1Ljc0LjE1OA==
-//
+int dkfeps(int b) {
+    return shit;
+}
 
 int primeNumber(int n) {
     int count = 0;
