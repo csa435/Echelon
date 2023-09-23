@@ -1,0 +1,40 @@
+// Générateur de nombre aléatoire entre 1 et 100
+function generateRandomNumber() {
+  return Math.floor(Math.random() * 100) + 1;
+}
+
+// Variables globales
+const secretNumber = generateRandomNumber();
+let attempts = 0;
+let isGameWon = false;
+
+// Fonction pour vérifier si un nombre est correct
+function checkGuess(guess) {
+  attempts++;
+
+  if (guess === secretNumber) {
+    isGameWon = true;
+    return `Félicitations ! Vous avez trouvé le nombre secret en ${attempts} essais.`;
+  } else if (guess < secretNumber) {
+    return "Le nombre est trop bas. Essayez encore.";
+  } else {
+    return "Le nombre est trop élevé. Essayez encore.";
+  }
+}
+
+// Fonction principale du jeu
+function playGame() {
+  while (!isGameWon) {
+    const userGuess = parseInt(prompt("Devinez le nombre secret (entre 1 et 100) :"));
+
+    if (isNaN(userGuess) || userGuess < 1 || userGuess > 100) {
+      alert("Veuillez entrer un nombre valide entre 1 et 100.");
+    } else {
+      const result = checkGuess(userGuess);
+      alert(result);
+    }
+  }
+}
+
+// Démarrer le jeu
+playGame();
